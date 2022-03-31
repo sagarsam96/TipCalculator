@@ -1,0 +1,16 @@
+li span{
+    margin: 1%;
+    background-color: aliceblue;
+}
+li{
+    margin: 1%;
+    list-style: none;
+    padding: 2%;
+    background-color: bisque;
+    width: 100%;
+}
+
+#total{
+    margin: 1%;
+    background-color: aquamarine;
+}

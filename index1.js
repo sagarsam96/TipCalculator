@@ -9,27 +9,28 @@ const total = document.getElementById("total");
 
 const node = (elem)=> {return (document.createElement(elem));}
 const appendNode = (parent, child)=>{ return parent.appendChild(child)}
-
 const doSomething =(x)=>{ return x.money}
 
 
 // print(id, paisa, peghaam, res);
 const print=(id, paisa, peghaam, res)=> {
-    let one= node("li"),
+    let zero = node("li"), 
+    one= node("span"),
     two= node("span"),
     three= node("span");
-    
 
-    one.innerText=id;
-    two.innerText=paisa;
-    three.innerText=peghaam;
+    three.title= peghaam;
+    peghaam= peghaam.length>9? peghaam.slice(0, 9)+"...": peghaam;
+
+    one.innerHTML=`Id: ${id}`;
+    two.innerHTML=`Money: ₹${paisa}`;
+    three.innerHTML=`Message: ${peghaam}`;
     
-    appendNode(display, one);
+    appendNode(display, zero);
+    appendNode(zero, one);
     appendNode(one, two);
     appendNode(two, three);
 }
-
-
 
 //class
 const tip = [
@@ -41,6 +42,7 @@ const tip = [
     }
 ]
 
+//variable
 let count =0;
 
 //eventhandlers
@@ -51,21 +53,15 @@ submit.addEventListener("click", ()=>{
     const paisa= money.value;
     const peghaam = message.value;
     let id=count++;
-
-    console.log(`id: ${id}, Money: ${paisa}, Message: ${peghaam}`);
-
     const object = { id:id, money:paisa, message:peghaam}
     tip.push(object);
-    console.log(tip);
-    
     const moneyArray = tip.map(doSomething)
     const res = moneyArray.reduce( (acc, curr)=>{ acc= acc+(+(curr)); return acc})
-    console.log(res);
-
     print(id, paisa, peghaam, res);
     total.style.display="block";
-    total.innerText=res;
+    total.innerText=`₹${res}`;
     money.value="";
-    message.value=""}
+    message.value="";
+     }
  })
  

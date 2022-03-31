@@ -1,16 +1,58 @@
-li span{
-    margin: 1%;
-    background-color: aliceblue;
-}
-li{
-    margin: 1%;
-    list-style: none;
+#container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(240, 36, 0, 0.87);
+    color: white;
     padding: 2%;
-    background-color: bisque;
-    width: 100%;
 }
 
-#total{
+label{
+    margin-left: 10px;
+}
+
+#input{
     margin: 1%;
-    background-color: aquamarine;
+    padding: 1%;
+}
+
+
+#display{
+    padding: 1%;
+    width: 50%;
+    margin: 1%;
+    display: flex;
+    flex-direction: column;
+}
+
+li span{
+    margin: 1%;
+    padding: 1%;
+}
+
+li{
+    margin: 2%;
+    list-style: none;
+    width: 100%;
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+.di{
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+    margin: 1%;
+    padding: 1% 2%;
+}
+
+footer{
+    text-align: center;
+    background-color: yellow;
+    padding: 1%;
 }

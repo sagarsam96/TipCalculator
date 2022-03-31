@@ -11,21 +11,21 @@
     <div id="container">
         <head>Tip Calculator</head>
         <div id="input">
-            <!-- <form action="submit"> -->
-                <label for="money">Tip</label>
-                <input type="number" id="money">
-                
-                <label for="message">Message</label>
-                <input type="text" id="message">
-
+                <label for="money">Tip (₹)
+                    <input type="number" id="money" placeholder="in rupees">
+                </label>
+                <label for="message">Message
+                    <input type="text" id="message" placeholder="thanks for service..">
+                </label>
                 <button type="submit" id="submit">Submit</button>    
-            <!-- </form> -->
+            
             </div>
-        <div id="total" style="display: none;"></div>
+        <div class="di">
+            <span><i>Total Tip</i> <span id="total" style="display: none;"></span></span>
+        </div>
         <div id="display"></div>
-
     </div>
-    
+    <footer>Collection: Pretty Projects by Sagar Sameer</footer>
 
     <script src="index1.js"></script>
 </body>

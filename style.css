@@ -56,3 +56,23 @@ footer{
     background-color: yellow;
     padding: 1%;
 }
+
+@media screen and (max-width: 480px){
+    #input{
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        padding: 1%;
+    }
+    #input #money{
+        position: relative;
+        left: 6px;
+    }
+    #input label{
+        margin:5px;
+    }
+
+    li span {
+       font-size: 12px;
+    }
+
+}
